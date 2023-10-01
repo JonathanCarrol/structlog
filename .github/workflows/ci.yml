@@ -45,7 +45,7 @@ jobs:
             objects.githubusercontent.com:443
             pypi.org:443
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -75,7 +75,7 @@ jobs:
             github.com:443
             pypi.org:443
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           # Use latest Python, so it understands all syntax.
@@ -119,7 +119,7 @@ jobs:
           - "~3.11.0-0"
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -131,7 +131,7 @@ jobs:
     name: Build docs & run doctests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           # Keep in sync with tox.ini/docs & readthedocs.yml
@@ -156,7 +156,7 @@ jobs:
             github.com:443
             pypi.org:443
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # get correct version
       - uses: hynek/build-and-inspect-python-package@v1
@@ -180,7 +180,7 @@ jobs:
             github.com:443
             pypi.org:443
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: ${{env.PYTHON_LATEST}}
